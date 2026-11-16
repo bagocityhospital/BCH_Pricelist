@@ -116,7 +116,7 @@ a.fl:hover{text-decoration:underline}
  </div>
  <div class="list" id="list"></div>
  <div id="diag" hidden></div>
- <p class="note" id="dnote" hidden>Prices are in Philippine pesos (₱), as shown on the Diagnostic Services price list poster. Two prices are listed for the extremities groups on that poster.</p>
+ <p class="note" id="dnote" hidden>Prices are in Philippine pesos (₱), as shown on the Diagnostic Services price list poster.</p>
  <p class="note" id="pnote">Prices are in Philippine pesos. The ** mark is carried over from the original price list.</p>
 </main>
 <button class="btn primary top" id="top" type="button" aria-label="Back to top">↑</button>
@@ -155,8 +155,8 @@ function render(){if(S.tab==='diagnostics')return renderDiag();$('#list').hidden
 const peso=n=>'₱'+n.toLocaleString('en-PH');
 const DIAG=[
 {k:'xray',v:'xray',n:'X-ray examination',c:'#0B3A82',rows:[['Chest PA / AP view',175],['Chest APL / PAL view',270],['Chest Bucky',200],['Skull APL',350],["Water's view",300],['Mandible APL / APO',400],["Towne's view",300],['T-Lumbar APL',560],['L-Sacral APL',560],['Cervical spine APL',350],['Abdomen supine / upright',250],['Pelvis AP',250]]},
-{k:'xray',v:'xray',n:'Upper extremities',c:'#0B3A82',note:'Shoulder APL, Arm APL, Elbow APL, Forearm APL, Hand APL, Wrist APL, Hand APL',prices:[350,525]},
-{k:'xray',v:'xray',n:'Lower extremities',c:'#0B3A82',note:'Thigh APL, Knee APL, Leg APL, Ankle APL, Foot APL',prices:[350,525]},
+{k:'xray',v:'xray',n:'Upper extremities',c:'#0B3A82',rows:[['Shoulder APL',350],['Arm APL',350],['Elbow APL',350],['Forearm APL',350],['Wrist APL',350],['Hand APL',350],,['Hand APOL',525]]},
+{k:'xray',v:'xray',n:'Lower extremities',c:'#0B3A82',rows:[['Thigh APL',350],['Knee APL',350],['Leg APL',350],['Ankle APL',350],['Foot APL',350],['Ankle APOL',525],['Foot APOL',525]]},
 {k:'micro',v:'lab',n:'Clinical microscopy',c:'#1560BD',rows:[['Urinalysis (routine)',75],['Pregnancy test (urine)',180]]},
 {k:'para',v:'lab',n:'Parasitology',c:'#0A74A8',rows:[['Fecalysis (routine)',55],['Fecal occult blood',150]]},
 {k:'chem',v:'lab',n:'Clinical chemistry',c:'#2B8A3E',rows:[['FBS / RBS / 2HPPBS',120],['BUN',150],['Creatinine',150],['Lipid profile',600],['Total cholesterol',180],['HDL - cholesterol',170],['Triglycerides',205],['Uric acid',130],['SGPT (ALT)',170],['SGOT (AST)',170],['Sodium',200],['Potassium',200],['Chloride',200],['Albumin',400],['Hba1c',900],['50g OGTT',650],['75g OGTT',900],['100g OGTT',1000]]},
